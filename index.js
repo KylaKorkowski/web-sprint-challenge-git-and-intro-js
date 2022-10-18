@@ -366,18 +366,17 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, nationality){
-  // const filteredArr = [];
+  let nameArr = [];
+  const nationalityFil = array.map(element => {
+    if(element.nationality === nationality) {
+      nameArr.push(element.name)
+    }
+    });
   
-  // for(let i = 0; i < array.length; i++) {
-  //   if(array[i].region === nationality) {
-  //     filteredArr.push(array[i]);
-  //   }
-  // }
+  return nameArr;
 
-  // return filteredArr;
 }
-
-console.log(artistByCountry())
+console.log(artistByCountry(artists, 'Spanish'));
 
 /* ***** END OF TASKS ***** */
 
