@@ -320,17 +320,17 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(array) {
- 
-
-//   for(let i = 0; i < array.length; i++) {
-//     array.filter(array[i].paintings > 100, array[i].paintings);
-//     array.push(array[i].name);
-//   }
-//   return array;
+    
+ const filteredArr = array.filter(element => element.paintings > 100);
+ const newArr = [];
+ for(let i = 0; i < filteredArr.length; i++) {
+  newArr.push(filteredArr[i].name);
+}
+ return newArr;
 
 }
 
-// console.log(lotsOfArt(artists));
+console.log(lotsOfArt(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
